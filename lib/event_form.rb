@@ -15,6 +15,7 @@ class EventForm
     normalize_date_and_time_for_attribute!(attributes, :start)
     normalize_date_and_time_for_attribute!(attributes, :end)
     event.attributes = attributes
+    event
   end
   
 private
