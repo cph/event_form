@@ -9,6 +9,16 @@ class EventForm
   
   def initialize(attributes)
     @attributes = attributes
+    @with_local_time = false
+  end
+  
+  def with_local_time
+    @with_local_time = true
+    self
+  end
+  
+  def with_local_time?
+    @with_local_time
   end
   
   def to(event)
@@ -44,6 +54,8 @@ private
   def from_date_and_time(date, time)
     args = [date.year, date.month, date.day]
     args.concat [time.hour, time.min] if time
+    return Time.zone.local *args if with_local_time?
     Time.utc *args
-  end  
+  end
+  
 end
