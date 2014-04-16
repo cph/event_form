@@ -6,10 +6,10 @@ require 'event_form/version'
 Gem::Specification.new do |spec|
   spec.name          = "event_form"
   spec.version       = EventForm::VERSION
-  spec.authors       = ["Bob Lail"]
-  spec.email         = ["bob.lail@cph.org"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
+  spec.authors       = ["Bob Lail", "Ben Govero"]
+  spec.email         = ["bob.lail@cph.org", "ben.govero@cph.org"]
+  spec.summary       = %q{Normalizes params posted from an event form}
+  spec.description   = %q{Normalizes params posted from an event form and assigns them to an event model}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -20,4 +20,10 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.6"
   spec.add_development_dependency "rake"
+  spec.add_development_dependency "rails", ">= 3.2.8", "< 4.1.0"
+  spec.add_development_dependency "turn"
+  spec.add_development_dependency "simplecov"
+  spec.add_development_dependency "shoulda-context"
+  spec.add_development_dependency "pry"
+
 end
